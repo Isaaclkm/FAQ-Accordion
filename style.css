@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --text-primary-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --text-primary-soft-red: hsl(14, 88%, 65%);
+
+    --Soft-primary-violet: hsl(273, 75%, 66%);
+    --Soft-primary-blue: hsl(240, 73%, 65%);
+
+    --text-neutral-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --text-neutral-dark-grayish-blue: hsl(240, 6%, 50%);
+    --divider-light-grayish-blue: hsl(240, 5%, 91%);
+    --ff-font: 'Kumbh Sans';
+}
+html{
+  overflow: scroll;
+}
+
+body{
+    margin: 3rem 0 0 0;
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, var(--Soft-primary-blue), var(--Soft-primary-violet));
+    font-family: var(--ff-font);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    
+    /* text-align: center; */
+}
+.main{
+    border-radius: 1.5rem;
+    background: #fff ;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    min-height: 31.25rem;
+    background-image: url('./images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: top;
+}
+
+.main .imagen #mb-img{
+  width: 60%;
+  height: 100%;
+  transform: translateY(-5.45rem);
+  
+}
+.main  .imagen{
+  height: 10rem;
+  text-align: center;
+  /* z-index: 1000; */
+
+}
+#dsk-img{
+  display: none;
+}
+.content{
+   min-height: 21rem;
+   border-radius: 5%;
+   /* overflow: auto; */
+   min-height: max-content;
+}
+.accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-family: var(--ff-font);
+    outline: none;
+    font-size: 13px;
+    transition: 0.7s;
+    border-radius: 3%;
+  }
+  .active, .accordion:hover {
+    background-color: #fff; 
+    font-weight: 800;
+  }
+
+  .accordion-wrapper{
+    border-bottom: 1px solid #aaa;
+    margin: 0 2rem;
+  }
+  h2{
+    text-align: center;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    font-size: 12px;
+    border-radius: 0 0 1rem 1rem;
+  }  
+
+
+
+  @media (min-width: 56rem){
+    .main{
+    border-radius: 2rem;
+    background: #fff ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    width: 57rem;
+    min-height: 27rem;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: left top;
+    background-position-y: -13.5rem ;
+    background-position-x: -23rem;
+    }
+    .main > * {
+      flex: 1 ; 
+    }
+    .main .imagen{
+      height: 100%;
+    }
+    
+    .content{
+       overflow: auto;
+       min-height: max-content;
+    }
+    .main #mb-img{
+      display: none;
+    }
+    .main #dsk-img{
+      display: initial;
+      width: 90%;
+      height: 90%;
+      transform: translateX(-5.45rem);
+    }
+    .accordion-wrapper{
+      border-bottom: 1px solid #aaa;
+      margin-right: 5rem;
+    }
+  }
